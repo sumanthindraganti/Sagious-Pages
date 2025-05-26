@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catlog page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    </head><style>
+        body{
+            background-color: black;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            font-family: "Times Roman";
+        }
+
+       .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 80px;
+        background: black;
+        border-bottom: 1px solid red;
+        box-shadow: 0 0 30px red;
+     }
+
+        .navbar h2 {
+            color: #ffffff;
+            font-size: 25px;
+            font-weight: 500px;
+            padding: 0px 0px;
+        }
+
+        .navmenu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navmenu li a:hover {
+            color: red;
+            text-decoration: underline;
+            display: flex;
+            padding: 10px;
+            transform: scale(1.3);
+        }
+
+        .navmenu li {
+            text-decoration: underline;
+            color: whitesmoke;
+            display: inline-block;
+        }
+        .navmenu li a:hover{
+        color: red;
+        text-decoration: 2px red underline ;
+        display: inline-block;
+        padding: 10px;
+        transform: scale(1.3);
+    }
+
+        .navmenu li a {
+            color: #ffffff;
+            margin-right: 20px;
+            padding: 0px 10px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+         .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 0%;
+            width: 120px;
+            height: 70px;
+            margin-right: 15px;
+        }
+
+        .search-box .search {
+            padding: 12px 8px;
+            border-radius: 50px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .search-box .search i {
+            color: #ffffff;
+            position: relative;
+            right: 10%;
+            top: 2px;
+            background-color: #0b910b;
+            padding: 12px;
+            border-radius: 50px;
+        }
+
+        .sidenav {
+            display: block;
+            float: left;
+            border-radius:5px;
+            border-top: 1px solid red;border-right: 1px solid red;border-bottom: 1px solid red;
+         box-shadow: 0 0 30px red;
+            margin-top: 5.3%;
+            width: 13%;
+            height: 101.5%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            padding-top: 30px;
+
+        }
+
+        .sidenav h1 {
+            text-decoration: underline;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .sidenav a {
+            text-align: center;
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: whitesmoke;
+            display: block;
+        }
+
+        .sidenav a:hover{
+            color: red;
+             transform: scale(1.0);
+             background-color: whitesmoke;
+          
+        }
+
+         #bookCatalog {
+            margin-left: 200px;
+            padding: 20px;
+            background-color: BLACK;
+        }
+        
+
+        .book {
+            border-radius: 10px;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 15px;
+            border-bottom: 1px solid red;
+         box-shadow: 0 0 15px red;
+            display: inline-block;
+            width: 200px;
+            height: 360px;
+            overflow: hidden;    
+            color: whitesmoke;
+        }
+        .book:hover{
+            filter: grayscale(1);
+    transform: scale(1.1);
+      border-bottom: 1px solid whitesmoke;
+         box-shadow: 0 0 15px whitesmoke; 
+        }
+
+        img {
+            border-radius: 5px;
+            margin-left: 15%;  
+              max-width: 100%;
+            height: 200px;
+            box-shadow: 4px 7px 7px 0px #100C08;
+        }
+        .book button{
+            size: 5px;
+            align-items: center;
+            margin-left: 35%;
+            background-color: black;
+            border: 1px solid red;
+         box-shadow: 0 0 10px red;
+            color: whitesmoke;
+            border-radius: 6px;
+            padding: 3px 3px;
+        }
+        footer {
+        border-top: 1px solid red;
+         box-shadow: 0 0 30px red;
+            background-color: black;
+            color: whitesmoke;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .foot {
+            max-width: 300px;
+        }
+        .social-icons a {
+	              color: whitesmoke;
+            margin-right: 10px;
+            font-size: 30px;
+            padding-bottom: 10;
+        }
+        
+        .social-icons i {
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .social-icons i:hover {
+            color: red;
+        }
+
+ 
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="sag2.png" class="logo"><h2>Sagacious Pages</h2></div>
+        <div class="navmenu">
+            <ul >
+                <a href="homepage45.html"><li><i class="fas fa-home">&nbsp;&nbsp;</i>Home</a></li>
+                    <li><a href="catlog45.html"><i class="fa-solid fa-list">&nbsp;&nbsp;</i>Catlog</a></li>
+                    <li><a href="register18.html"><i class="fa-solid fa-user">&nbsp;&nbsp;</i>Registration</a></li>
+                    <li><a href="login45.html"><i class="fa-solid fa-right-to-bracket">&nbsp;&nbsp;</i>Login</a></li>
+                    <li><a href="#aboutus"><i class="fa-solid fa-circle-exclamation">&nbsp;&nbsp;</i>About Us</a></li>
+                </ul>
+            <div class="search-box">
+                <input type="search" class="search" placeholder="search here....">
+                <i class='bx bx-search'></i>
+            </div>
+        </div>
+
+        <div class="sidenav">
+            <h1>Categories</h1>
+            <br>
+            <a href="#about">Historical Fiction</a>
+            <a href="#services">Fantasy</a>
+            <a href="#clients">Horror</a>
+            <a href="#contact">Science Fiction</a>
+            <a href="#contact">Romance</a>
+            <a href="#contact">Mystery</a>
+            <a href="#contact">Action and Adventure</a>
+            <a href="#contact">Thriller</a>
+            <a href="#contact">Biography</a>
+            <a href="#contact">Humor</a>
+        </div>
+    </nav>
+    <section>
+<div>
+<section id="bookCatalog">
+
+    <article class="book">
+        <img src="sa1.jpg" alt="Book Cover 1">
+        <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;">The Nightingale</a></h2>
+        <p style="text-align: center;">Kristin Hannah</p>
+        <p  class="star" style="text-align: center;">★★★★★</p>
+        <p style="text-align: center;">Price: 400</p>
+        <button style="margin-top: 22%;">Add to Cart</button>
+    </article>
+    <article class="book">
+            <img src="sa2.jpg" alt="Book Cover 1">
+            <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;">Hunt on Dark Waters</a></h3>
+            <p style="text-align: center;">Katee Robert</p>
+                    <p class="star" style="text-align: center;">★★★★★</p>
+
+            <p style="text-align: center;">Price: 500</p>
+            <button style="margin-top: 9%;">Add to Cart</button>
+    </article>
+    <article class="book">
+        <img src="sa3.jpg" alt="Book Cover 1">
+        <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;">Dark Matter: A Ghost Story</a></h2>
+        <p style="text-align: center;">Michelle Paver</p>
+                <p class="star" style="text-align: center;">★★★★☆</p>
+
+        <p style="text-align: center;">Price: 600</p>
+        <button style="margin-top: 9%;">Add to Cart</button>
+    </article>
+    <article class="book">
+        <img src="sa4.jpg" alt="Book Cover 1">
+        <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;">System Collapse</a></h2>
+        <p style="text-align: center;">Marthha Wells</p>
+                <p class="star" style="text-align: center;">★★★★☆</p>
+
+        <p style="text-align: center;">Price: 600</p>
+        <button style="margin-top: 23%;">Add to Cart</button>
+    </article>
+   
+    <article class="book">
+        <img src="sa5.jpg" alt="Book Cover 1">
+        <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;">Love Redesigned</a></h2>
+        <p style="text-align: center;">Lauren Asher</p>
+                <p class="star" style="text-align: center;">★★★★★</p>
+
+        <p style="text-align: center;">Price: 800</p>
+        <button style="margin-top: 24%;">Add to Cart</button>
+    </article>
+    <article class="book">
+            <img src="sa6.jpg" alt="Book Cover 1">
+            <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;">Good Girls Don't Die</a></h2>
+            <p style="text-align: center;">Chritina Henry</p>
+                    <p class="star" style="text-align: center;">★★★★☆</p>
+
+            <p style="text-align: center;">Price: 900</p>
+            <button style="margin-top: 11%;">Add to Cart</button>
+    </article>
+    <article class="book">
+        <img src="sa7.jpg" alt="Book Cover 1">
+        <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;">The Hunger Games</a></h2>
+        <p style="text-align: center;">Suzanne Collins</p>
+                <p class="star" style="text-align: center;">★★★★★</p>
+
+        <p style="text-align: center;">Price: 500</p>
+        <button style="margin-top: 11%;">Add to Cart</button>
+    </article>
+    <article class="book">
+        <img src="sa8.jpg" alt="Book Cover 1">
+        <h2 style="text-align: center;"><a href=" " style="color:whitesmoke;">The Professor</a></h2>
+        <p style="text-align: center;">Lauren Nossett</p>
+                <p class="star" style="text-align: center;">★★★★☆</p>
+
+        <p style="text-align: center;">Price: 550</p>
+        <button style="margin-top: 24%;">Add to Cart</button>
+    </article>
+<article class="book">
+    <img src="sa9.jpg" alt="Book Cover 1">
+    <h2 style="text-align: center;"><a href=" " style="color: whitesmoke;;">Romney: A Reckoning</a></h2>
+    <p style="text-align: center;">McKay Coppins</p>
+            <p class="star" style="text-align: center;">★★★★★</p>
+
+    <p style="text-align: center;">Price: 599</p>
+    <button style="margin-top: 11%;">Add to Cart</button>
+</article>
+<article class="book">
+        <img src="sa10.jpg" alt="Book Cover 1">
+        <h2 style="text-align: center;"><a href=" " style="color:whitesmoke;">Four Weddings and a Puppy</a></h2>
+        <p style="text-align: center;">Lizzie Shane</p>
+                <p class="star" style="text-align: center;"x>★★★★★</p>
+
+        <p style="text-align: center;">Price: 600</p>
+        <button style="margin-top: 11%;">Add to Cart</button>
+</article>
+    </section>
+    <footer>
+            <div class="foot" style="align-content: left;">
+               
+                <ul class="ss" style="text-decoration: underline;">
+                    <li><a href="homepage45.html"; style="color: white";> Home</a></li>
+                    <li><a href="catlog45.html" style="color: white";>Catalog</a></li>
+                    <li><a href="register18.html" style="color: white";> Register</a></li>
+                    <li><a href="login45.html" style="color: white";> Login</a></li>
+                    <li><a href="login.html" style="color: white";> About Us</a></li>
+                    
+                </ul>
+              </div>
+              
+              <div class="foot">
+                <h2>&nbsp&nbspFollow us </h2>
+                <hr><br>
+                <div class="social-icons">
+                    <ul type="none">
+                        <li >
+                            <a href="https://mail.google.com/"><i class="fa-brands fa-google "></i> </a>
+                            <a href="https://twitter.com/"><i class="fa-brands fa-square-x-twitter "></i> </a>
+                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin "></i></a>
+                        </li>
+                    </ul>
+              </div>
+              </div>
+              
+              <div class="foot">
+                <h2>Contact Us</h2>
+                <hr>
+                <p>Sagious</p>
+                <p>phone no:9347059500</p>
+                <p>sagiousbookstore18@gmail.com</p>
+              </div>
+        </footer>
+</header>
+</body>
+</html>

@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <style>
+ *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family:"Times Roman";
+  }
+  .surya{
+    background-color: black;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background: black;
+    border-radius: 0px 0px 0px 0px;
+    border-bottom: 1px solid red;
+     box-shadow: 0 0 30px red;
+
+  }
+  .navbar h2{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0px 20px;
+  }
+  .navmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .navmenu li a:hover{
+    color: red;
+    text-decoration: 2px red underline ;
+    display: flex;
+    padding: 10px;
+    transform: scale(1.3);
+  }
+  .navmenu li{
+  text-decoration: 2px whitesmoke underline ;
+    color: whitesmoke;
+    display: inline-block;
+  }
+  .navmenu li a{
+    color: #ffffff;
+    margin-right: 20px;
+    padding: 0px 10px;
+    font-size: 18px;
+    font-weight: 500px;
+  }
+   .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: 70px;
+            margin-right: 10px;
+        }
+   .navmenu li a:hover{
+        color: red;
+        text-decoration: 2px red underline ;
+        display: inline-block;
+        padding: 10px;
+        transform: scale(1.3);
+    }
+  .search-box .search{
+    padding: 12px 8px;
+    border-radius: 50px;
+    font-size:16px ;
+    color: black;
+  }
+  .search-box .search i{
+    color: #ffffff;
+    position: relative;
+    right: 10%;
+    top: 2px;
+    background-color:#0b910b;
+    padding: 12px;
+    border-radius: 50px;
+  }
+    .container {
+        align-content: center;
+  margin-left: 30%;
+  margin-right: 35%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  background-color: black;
+  color: whitesmoke;
+  padding: 70px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 0 30px red
+}
+
+header {
+    text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender-box {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.gender-option {
+  display: flex;
+  gap: 10px;
+}
+.input-box input { 
+
+  border: 1px solid whitesmoke;
+  box-shadow: 0 0 10px whitesmoke;
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+button {
+    font-weight: bold;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: black;
+  border: 1px solid red;
+  box-shadow: 0 0 10px whitesmoke;
+  margin-top: 0px;
+  width: 100%;
+  padding: 9px;
+  border-radius: 25px;
+}
+
+button:hover {
+  background-color: red;
+  color: black;
+   box-shadow: 0 0 20px red;
+}
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        /* Style for the back to login link */
+        #backToLogin {
+            color: #3498db;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+
+
+        footer {
+   border-top: 1px solid red;
+     box-shadow: 0 0 30px red;
+            background-color: black;
+            color: whitesmoke;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .foot {
+            max-width: 300px;
+        }
+        .social-icons a {
+                color: whitesmoke;
+            margin-right: 10px;
+            font-size: 30px;
+            padding-bottom: 10;
+        }
+        
+        .social-icons i {
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .social-icons i:hover {
+            color: red;
+        }
+
+
+    </style>
+    <title>User Authentication</title>
+</head>
+<body>
+    <div class="surya">
+    <nav class="navbar">
+     <div class="logo-container">
+            <img src="sag2.png" class="logo"><h2>Sagacious Pages</h2>
+      </div>
+      <div class="navmenu">
+        <ul >
+                <a href="homepage45.html"><li><i class="fas fa-home">&nbsp;&nbsp;</i>Home</a></li>
+                    <li><a href="catlog45.html"><i class="fa-solid fa-list">&nbsp;&nbsp;</i>Catlog</a></li>
+                    <li><a href="register18.html"><i class="fa-solid fa-user">&nbsp;&nbsp;</i>Registration</a></li>
+                    <li><a href="login45.html"><i class="fa-solid fa-right-to-bracket">&nbsp;&nbsp;</i>Login</a></li>
+                    <li><a href="#aboutus"><i class="fa-solid fa-circle-exclamation">&nbsp;&nbsp;</i>About Us</a></li>
+                </ul>
+        <div class="search-box">
+         <input type="search" class="search" placeholder="search here....">
+         <i class='bx bx-search'></i>
+        </div>
+      </div>
+    </nav>
+    <section class="container">
+        <header style="text-shadow: 0 0 30px red;">Sagious Bookstore Registration</header>
+        <form class="form" action="#" onsubmit="return showConfirmation()">
+            <div class="input-box">
+                <label for="fullName">Full Name</label>
+                <input required="" placeholder="Enter full name" type="text" id="fullName"  >
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input required="" placeholder="Enter phone number" type="tel" id="phoneNumber">
+                </div>
+                <div class="input-box">
+                    <label for="birthDate">Birth Date</label>
+                    <input required="" placeholder="Enter birth date" type="date" id="birthDate">
+                </div>
+            </div>
+
+            <div class="gender-box">
+                <label>Gender</label>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input checked="" name="gender" id="check-male" type="radio">
+                        <label for="check-male">Male</label>
+                    </div>&nbsp;&nbsp;&nbsp;
+                    <div class="gender">
+                        <input name="gender" id="check-female" type="radio">
+                        <label for="check-female">Female</label>
+                    </div>&nbsp;&nbsp;&nbsp;
+                    <div class="gender">
+                        <input name="gender" id="check-other" type="radio">
+                        <label for="check-other">Prefer not to say</label>
+                    </div>&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="address">Address</label>
+                <input required="" placeholder="Enter street address" type="text" id="address">
+                <br><br><div class="column">
+                    <div class="select-box">
+                        <br><select>
+                            <option hidden="">Country</option>
+                            <option>India</option>
+                            <option>UK</option>
+                            <option>USA</option>
+                            <option>Japan</option>
+                        </select>
+                    </div>&nbsp;&nbsp;
+                    <input required="" placeholder="Enter your city" type="text">
+                </div>
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input required="" placeholder="Enter your email" type="email" id="email">
+            </div>
+
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input required="" placeholder="Enter a password" type="password" id="password">
+            </div>
+
+            <div class="input-box">
+                <label for="confirmPassword">Confirm Password</label>
+                <input required="" placeholder="Confirm your password" type="password" id="confirmPassword">
+            </div>
+            <div class="input-box">
+                <label for="favoriteGenre">Favorite Book Genre</label>
+                <div class="select-box">
+                    <select id="favoriteGenre" name="favoriteGenre">
+                        <option hidden="">Select Genre</option>
+                        <option>Fiction</option>
+                        <option>Non-Fiction</option>
+                        <option>Mystery</option>
+                        <option>Science Fiction</option>
+                    </select>
+                </div>
+                <div class="input-box"><br>
+                    <label for="file">Upload File:</label>
+                     <input type="file" id="file" name="file" required>
+                 </div>
+
+        </div>
+          <br>  <button type="submit" onclick="location.href='login45.html'">Register</a></button>
+        </form>
+    </section>
+
+    <!-- Popup message div -->
+    <div id="popupMessage" class="popup">
+        <p>Successfully Registered!</p>
+        <p id="backToLogin">Back to Login</p>
+    </div>
+    <footer>
+            <div class="foot" style="align-content: left;">
+               
+                <ul class="ss" style="text-decoration: underline;">
+                    <li><a href="homepage45.html"; style="color: white";> Home</a></li>
+                    <li><a href="catlog45.html" style="color: white";>Catalog</a></li>
+                    <li><a href="register18.html" style="color: white";> Register</a></li>
+                    <li><a href="login45.html"style="color: white";> Login</a></li>
+                    <li><a href="login.html" style="color: white";> About Us</a></li>
+                    
+                </ul>
+              </div>
+              
+              <div class="foot">
+                <h2>&nbsp&nbspFollow us </h2>
+                <hr><br>
+                <div class="social-icons">
+                    <ul type="none">
+                        <li >
+                            <a href="https://mail.google.com/"><i class="fa-brands fa-google "></i> </a>
+                            <a href="https://twitter.com/"><i class="fa-brands fa-square-x-twitter "></i> </a>
+                            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin "></i></a>
+                        </li>
+                    </ul>
+              </div>
+              </div>
+              
+              <div class="foot">
+                <h2>Contact Us</h2>
+                <hr>
+                <p>Sagious</p>
+                <p>phone no:9347059500</p>
+                <p>sagiousbookstore18@gmail.com</p>
+              </div>
+        </footer>
+        
+        
+      </div>
+
+
+    <script>
+        function showConfirmation() {
+            // Check for forgot password form submission
+            if (document.getElementById("forgotPasswordForm")) {
+                var email = document.getElementById("email").value;
+                var newPassword = document.getElementById("new-password").value;
+                var confirmPassword = document.getElementById("confirm-password").value;
+
+                if (!email || !newPassword || !confirmPassword) {
+                    alert("Please fill all details");
+                    return false;
+                }
+
+                alert("Password reset successful for email: " + email);
+                return false;
+            }
+
+            // Check for registration form submission
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var birthDate = document.getElementById("birthDate").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var address = document.getElementById("address").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var favoriteGenre = document.getElementById("favoriteGenre").value;
+
+            if (!fullName || !email || !phoneNumber || !birthDate || !gender || !address || !password || !confirmPassword || !favoriteGenre) {
+                alert("Please fill in all details");
+                return false;
+            }
+
+            // Show the popup message
+            document.getElementById("popupMessage").style.display = "block";
+
+            // Prevent the form from actually submitting
+            return false;
+        }
+
+        // Attach a click event to the "Back to Login" link
+        var backToLoginLink = document.getElementById("backToLogin");
+        backToLoginLink.addEventListener("click", function () {
+            // Redirect to the login page or perform any other action
+            window.location.href = "login.html"; // Replace with your actual login page path
+        });
+    </script>
+
+</body>
+</html>
